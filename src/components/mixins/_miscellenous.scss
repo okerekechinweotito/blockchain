@@ -1,0 +1,18 @@
+$headerBackground: #153a62;
+$hamburgerBackground: #3a7aa5;
+$menuColor: #ffffff;
+$dropdownHover: #55595c;
+$aColor: #0c30fa;
+$borderColor: #ffcf62;
+$textBackground: #ffe6b4;
+$buttonColor: #0c6cf2;
+$footerlinks: #b9b9ba;
+
+@mixin backgroundImage($image) {
+  background-image: $image;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+$supportBgColor: #121d33;

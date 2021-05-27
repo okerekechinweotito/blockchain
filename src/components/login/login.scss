@@ -1,0 +1,166 @@
+@import "../mixins/miscellenous";
+
+.login {
+  background-color: $supportBgColor;
+  min-height: 106vh;
+}
+.login__header {
+  background-image: url("./assets/bg-pattern.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100vw;
+  height: 5em;
+  &--logo {
+    width: 80%;
+    max-width: 20em;
+    height: 5em;
+    margin: auto;
+    background-image: url("./assets/bc-logo.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+  }
+}
+
+.login__body {
+  width: 93%;
+  max-width: 30em;
+  min-height: 30em;
+  margin: auto;
+  background-color: $menuColor;
+  border-radius: 10px;
+  &__content {
+    padding: 0.1em 1em;
+    h3 {
+      font-size: 1.3em;
+      color: $dropdownHover;
+    }
+    label {
+      display: block;
+      text-align: left;
+      color: $dropdownHover;
+      padding: 0 0 0.5em;
+      font-weight: bold;
+      margin-top: 2em;
+    }
+    span {
+      font-weight: bold;
+      color: $dropdownHover;
+      font-size: 14px;
+    }
+    button {
+      -moz-appearance: none;
+      -webkit-appearance: none;
+      appearance: none;
+      background-color: $buttonColor;
+      color: $menuColor;
+      width: 30em;
+      max-width: 100%;
+      height: 3em;
+      border: none;
+      outline: none;
+      border-radius: 5px;
+      font-size: 0.9em;
+      font-weight: bold;
+      margin: 4em 0 2em 0;
+      cursor: pointer;
+    }
+    a {
+      color: $aColor;
+      text-decoration: none;
+    }
+
+    input {
+      display: block;
+      margin: 0 0 0.5em;
+      height: 4em;
+      width: 95%;
+      max-width: 100vw;
+      border: 1px solid rgba($color: $dropdownHover, $alpha: 0.2);
+      outline: none;
+      border-radius: 10px;
+      -moz-appearance: none;
+      -webkit-appearance: none;
+      appearance: none;
+      padding-left: 1em;
+      color: $dropdownHover;
+      font-weight: bold;
+      &:focus {
+        border: 1px solid rgba($color: $aColor, $alpha: 1);
+      }
+    }
+  }
+  .login__body__content__form--link {
+    a {
+      display: block;
+      color: $buttonColor;
+      text-align: left;
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 14px;
+      margin-bottom: 0.3em;
+    }
+  }
+}
+
+.login__footer {
+  &--signup {
+    margin: 1em 0 2em 0;
+    font-weight: bold;
+    color: $menuColor;
+    .signupText {
+      color: $menuColor;
+      text-decoration: none;
+      font-weight: bold;
+    }
+  }
+  &--links {
+    display: flex;
+    justify-content: space-evenly;
+    width: 100%;
+    max-width: 30em;
+    margin: auto;
+    height: 5em;
+    margin-bottom: 1em;
+  }
+  a {
+    color: $footerlinks;
+    font-weight: bold;
+    text-decoration: none;
+  }
+}
+
+.input2 {
+  display: flex;
+}
+.eyeOpenIcon,
+.eyeCloseIcon {
+  font-size: 1.4em;
+  z-index: 2;
+  margin-left: -1.4em;
+  align-self: center;
+  color: $dropdownHover;
+  transition: 1s;
+  cursor: pointer;
+}
+.eyeOpenIcon {
+  display: none;
+}
+
+@media screen and (min-width: 765px) {
+  .login__footer--links {
+    margin-top: 6em;
+  }
+  .login__body {
+    margin-top: 5em;
+  }
+  .login__body__content__form--link {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 3em;
+  }
+  .login {
+    min-height: 150vh;
+  }
+}
